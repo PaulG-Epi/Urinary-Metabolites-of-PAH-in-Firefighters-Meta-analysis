@@ -494,21 +494,45 @@ model425wild=metareg(mfortyfivewild,~Grilled_Food)
 
 
 
+###############################################################################################
+#for forest plots
+
+pdf(file="1-NAP (Grilled Food).pdf", width=10, height=40
+forest(model2002, slab=mtwo$studlab)
+grid.text("1-NAP (Grilled Food), .5, .9, gp=gpar(cex=2))
+dev.off()
+
+pdf(file="1-PHE (Grilled Food).pdf", width=10, height=40
+forest(model2003, slab=mthree$studlab)
+grid.text("1-PHE (Grilled Food), .5, .9, gp=gpar(cex=2))
+dev.off()
 
 
+pdf(file="1-PHE (Tyep of Fire).pdf", width=10, height=40
+forest(model3003, slab=mthree$studlab)
+grid.text("1-PHE (Type of Fire), .5, .9, gp=gpar(cex=2))
+dev.off()
 
 
+pdf(file="2-FLU (Type of Fire).pdf", width=10, height=40
+forest(model3005, slab=mfive$studlab)
+grid.text("2-FLU (Type of Fire), .5, .9, gp=gpar(cex=2))
+dev.off()
 
 
+######################################################################################################
+#for funnel plots
+funnel(mtwo, comb.fixed = F)
+title("Funnel Plot (1-hydroxynaphthalene)")
 
+funnel(msix, comb.fixed = F)
+title("Funnel Plot (2-hydroxynaphthalene)")
 
+funnel(mseven, comb.fixed = F)
+title("Funnel Plot (2-hydroxyphenanthrene)")
 
-
-
-
-
-
-
+funnel(meight, comb.fixed = F)
+title("Funnel Plot (3-hydroxyfluorene)")
 
 
 
