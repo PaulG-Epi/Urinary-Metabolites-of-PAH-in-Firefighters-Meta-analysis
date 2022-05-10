@@ -1,0 +1,218 @@
+# Urinary PAH analyte meta-analysis project
+
+library(ggplot2)
+library(meta)
+library(metafor)
+library(gridtext)
+library(readxl)
+PAH <- read_excel("C:/Users/pgrunste/OneDrive/Desktop/PAH.xlsx")
+PAH$`Number of Samples` <- as.numeric(PAH$`Number of Samples`)
+PAH$Duration_Exposure_min <- as.factor(PAH$Duration_Exposure_min)
+relevel(PAH$Duration_Exposure_min, ref="<=10")
+PAH$Duration_Exposure_min = relevel(PAH$Duration_Exposure_min, ref="<=10")
+
+#############################################################
+#creating subset samples:
+oneace <- PAH[PAH$`PAH analytes`=="1-hydroxyacenaphthene", ]
+onenap <- PAH[PAH$`PAH analytes`=="1-hydroxynaphthalene", ]
+onephe <- PAH[PAH$`PAH analytes`=="1-hydroxyphenanthrene", ]
+onepyr <- PAH[PAH$`PAH analytes`=="1-hydroxypyrene", ]
+twoflu <- PAH[PAH$`PAH analytes`=="2-hydroxyfluorene", ]
+twonap <- PAH[PAH$`PAH analytes`=="2-hydroxynaphthalene", ]
+twophe <- PAH[PAH$`PAH analytes`=="2-hydroxyphenanthrene", ]
+threeflu <- PAH[PAH$`PAH analytes`=="3-hydroxyfluorene", ]
+threephe <- PAH[PAH$`PAH analytes`=="3-hydroxyphenanthrene", ]
+fourphe <- PAH[PAH$`PAH analytes`=="4-hydroxyphenanthrene", ]
+nineflu <- PAH[PAH$`PAH analytes`=="9-hydroxyfluorene", ]
+ninephe <- PAH[PAH$`PAH analytes`=="9-hydroxyphenanthrene", ]
+ohflu <- PAH[PAH$`PAH analytes`=="hydroxyfluorenes", ]
+ohnap <- PAH[PAH$`PAH analytes`=="hydroxynaphthalenes", ]
+ohphe <- PAH[PAH$`PAH analytes`=="hydroxyphenanthrenes", ]
+ohpyr <- PAH[PAH$`PAH analytes`=="hydroxypyrenes", ]
+ohace <- PAH[PAH$`PAH analytes`=="hydroxyacenaphthenes", ]
+ohpah <- PAH[PAH$`PAH analytes`=="hydroxylated polycyclic aromatic hydrocarbons", ]
+
+#different subgroups (i.e., molucular weights and grouped analytes)
+#molecular weights
+onefourfour <- PAH[PAH$`Molecular Weight (g/mol)`=="144.17", ]
+onesevenzero <- PAH[PAH$`Molecular Weight (g/mol)`=="170.21", ]
+oneeighttwo <- PAH[PAH$`Molecular Weight (g/mol)`=="182.22", ]
+oneninefor <- PAH[PAH$`Molecular Weight (g/mol)`=="194.23", ]
+oneninefour <- PAH[PAH$`Molecular Weight (g/mol)`=="194.23", ]
+twooneeight <- PAH[PAH$`Molecular Weight (g/mol)`=="218.25", ]
+
+#grouped analytes
+allflu <- PAH[PAH$`PAH analytes`=="2-hydroxyfluorene" | PAH$`PAH analytes`=="3-hydroxyfluorene" | PAH$`PAH analytes`=="9-hydroxyfluorene" | PAH$`PAH analytes`=="hydroxyfluorenes", ]
+allnap <- PAH[PAH$`PAH analytes`=="1-hydroxynaphthalene" | PAH$`PAH analytes`=="2-hydroxynaphthalene" | PAH$`PAH analytes`=="hydroxynaphthalenes", ]
+allphe <- PAH[PAH$`PAH analytes`=="1-hydroxyphenanthrene" | PAH$`PAH analytes`=="2-hydroxyphenanthrene" | PAH$`PAH analytes`=="3-hydroxyphenanthrene" | PAH$`PAH analytes`=="4-hydroxyphenanthrene" | PAH$`PAH analytes`=="9-hydroxyphenanthrene" | PAH$`PAH analytes`=="hydroxyphenanthrenes", ]
+allpyr <- PAH[PAH$`PAH analytes`=="1-hydroxypyrene" | PAH$`PAH analytes`=="hydroxypyrenes", ]
+allace <- PAH[PAH$`PAH analytes`=="1-hydroxyacenaphthene" | PAH$`PAH analytes`=="hydroxyacenaphthenes", ]
+allpah <- PAH[PAH$`PAH analytes`=="1-hydroxyacenaphthene" | PAH$`PAH analytes`=="1-hydroxynaphthalene" | PAH$`PAH analytes`=="1-hydroxyphenanthrene" | PAH$`PAH analytes`=="1-hydroxypyrene" | PAH$`PAH analytes`=="2-hydroxyfluorene" | PAH$`PAH analytes`=="2-hydroxynaphthalene" | PAH$`PAH analytes`=="2-hydroxyphenanthrene" | PAH$`PAH analytes`=="3-hydroxyfluorene" | PAH$`PAH analytes`=="3-hydroxyphenanthrene" | PAH$`PAH analytes`=="4-hydroxyphenanthrene" | PAH$`PAH analytes`=="9-hydroxyfluorene" | PAH$`PAH analytes`=="9-hydroxyphenanthrene" | PAH$`PAH analytes`=="hydroxyfluorenes" | PAH$`PAH analytes`=="hydroxynaphthalenes" | PAH$`PAH analytes`=="hydroxyphenanthrenes" | PAH$`PAH analytes`=="hydroxypyrenes" | PAH$`PAH analytes`=="hydroxyacenaphthenes" | PAH$`PAH analytes`=="hydroxylated polycyclic aromatic hydrocarbons", ]
+
+################################################################
+# Overall estimates
+mone=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = oneace, comb.fixed = F, sm="AM")
+mtwo=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = onenap, comb.fixed = F, sm="AM")
+mthree=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = onephe, comb.fixed = F, sm="AM")
+mfour=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = onepyr, comb.fixed = F, sm="AM")
+mfive=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = twoflu, comb.fixed = F, sm="AM")
+msix=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = twonap, comb.fixed = F, sm="AM")
+mseven=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = twophe, comb.fixed = F, sm="AM")
+meight=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = threeflu, comb.fixed = F, sm="AM")
+mnine=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = threephe, comb.fixed = F, sm="AM")
+mten=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = fourphe, comb.fixed = F, sm="AM")
+meleven=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = nineflu, comb.fixed = F, sm="AM")
+mtwelve=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ninephe, comb.fixed = F, sm="AM")
+mthirteen=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ohflu, comb.fixed = F, sm="AM")
+mfourteen=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ohnap, comb.fixed = F, sm="AM")
+mfifteen=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ohphe, comb.fixed = F, sm="AM")
+msixteen=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ohpyr, comb.fixed = F, sm="AM")
+mseventeen=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ohace, comb.fixed = F, sm="AM")
+meighteen=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ohpah, comb.fixed = F, sm="AM")
+
+#molecular weights
+meighty=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = onefourfour, comb.fixed = F, sm="AM")
+meightyone=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = onesevenzero, comb.fixed = F, sm="AM")
+meightytwo=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = oneeighttwo, comb.fixed = F, sm="AM")
+meightythree=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = oneninefour, comb.fixed = F, sm="AM")
+meightyfour=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = twooneeight, comb.fixed = F, sm="AM")
+
+#grouped analytes
+mforty=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = allflu, comb.fixed = F, sm="AM")
+mfortyone=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = allnap, comb.fixed = F, sm="AM")
+mfortytwo=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = allphe, comb.fixed = F, sm="AM")
+mfortythree=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = allpyr, comb.fixed = F, sm="AM")
+mfortyfour=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = allace, comb.fixed = F, sm="AM")
+mfortyfive=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = allpah, comb.fixed = F, sm="AM")
+
+###############################################
+#Meta-reg estimates for Exposure Status
+model1=metareg(mone,~`Exposure_Status)
+model2=metareg(mtwo,~`Exposure_Status)
+model3=metareg(mthree,~`Exposure_Status)
+model4=metareg(mfour,~`Exposure_Status)
+model5=metareg(mfive,~`Exposure_Status)
+model6=metareg(msix,~`Exposure_Status)
+model7=metareg(mseven,~`Exposure_Status)
+model8=metareg(meight,~`Exposure_Status)
+model9=metareg(mnine,~`Exposure_Status)
+model10=metareg(mten,~`Exposure_Status)
+model11=metareg(meleven,~`Exposure_Status)
+model12=metareg(mtwelve,~`Exposure_Status)
+model13=metareg(mthirteen,~`Exposure_Status)
+model14=metareg(mfourteen,~`Exposure_Status)
+model15=metareg(mfifteen,~`Exposure_Status)
+model16=metareg(msixteen,~`Exposure_Status)
+model17=metareg(mseventeen,~`Exposure_Status)
+model18=metareg(meighteen,~`Exposure_Status)
+
+#Molecular weights
+model80=metareg(meighty,~`Exposure_Status)
+model81=metareg(meightyone,~`Exposure_Status)
+model82=metareg(meightytwo,~`Exposure_Status)
+model83=metareg(meightythree,~`Exposure_Status)
+model84=metareg(meightyfour,~`Exposure_Status)
+
+#grouped analytes
+model40=metareg(mforty,~`Exposure_Status)
+model41=metareg(mfortyone,~`Exposure_Status)
+model42=metareg(mfortytwo,~`Exposure_Status)
+model43=metareg(mfortythree,~`Exposure_Status)
+model44=metareg(mfortyfour,~`Exposure_Status)
+model45=metareg(mfortyfive,~`Exposure_Status)
+
+########################################################################################
+#meta-reg estimates for Duration of Exposure (min)
+model101=metareg(mone,~`Duration_Exposure_min)
+model102=metareg(mtwo,~`Duration_Exposure_min)
+model103=metareg(mthree,~`Duration_Exposure_min)
+model104=metareg(mfour,~`Duration_Exposure_min)
+model105=metareg(mfive,~`Duration_Exposure_min)
+model106=metareg(msix,~`Duration_Exposure_min)
+model107=metareg(mseven,~`Duration_Exposure_min)
+model108=metareg(meight,~`Duration_Exposure_min)
+model109=metareg(mnine,~`Duration_Exposure_min)
+model110=metareg(mten,~`Duration_Exposure_min)
+model111=metareg(meleven,~`Duration_Exposure_min)
+model112=metareg(mtwelve,~`Duration_Exposure_min)
+model113=metareg(mthirteen,~`Duration_Exposure_min)
+model114=metareg(mfourteen,~`Duration_Exposure_min)
+model115=metareg(mfifteen,~`Duration_Exposure_min)
+model116=metareg(msixteen,~`Duration_Exposure_min)
+model117=metareg(mseventeen,~`Duration_Exposure_min)
+model118=metareg(meighteen,~`Duration_Exposure_min)
+
+#molecular weights
+model800=metareg(meighty,~`Duration_Exposure_min)
+model801=metareg(meightyone,~`Duration_Exposure_min)
+model802=metareg(meightytwo,~`Duration_Exposure_min)
+model803=metareg(meightythree,~`Duration_Exposure_min)
+model804=metareg(meightyfour,~`Duration_Exposure_min)
+
+#grouped analytes
+model400=metareg(mforty,~Duration_Exposure_min)
+model401=metareg(mfortyone,~Duration_Exposure_min)
+model402=metareg(mfortytwo,~Duration_Exposure_min)
+model403=metareg(mfortythree,~Duration_Exposure_min)
+model404=metareg(mfortyfour,~Duration_Exposure_min)
+model405=metareg(mfortyfive,~Duration_Exposure_min)
+
+
+########################################################################################
+#meta-reg estimates for Sampling time after exposure (hr)
+model1001=metareg(mone,~Sampling_time_hr)
+model1002=metareg(mtwo,~Sampling_time_hr)
+model1003=metareg(mthree,~Sampling_time_hr)
+model1004=metareg(mfour,~Sampling_time_hr)
+model1005=metareg(mfive,~Sampling_time_hr)
+model1001=metareg(mone,~Sampling_time_hr)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
