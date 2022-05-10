@@ -87,67 +87,67 @@ mfortyfive=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = m
 
 ###############################################
 #Meta-reg estimates for Exposure Status
-model1=metareg(mone,~`Exposure_Status)
-model2=metareg(mtwo,~`Exposure_Status)
-model3=metareg(mthree,~`Exposure_Status)
-model4=metareg(mfour,~`Exposure_Status)
-model5=metareg(mfive,~`Exposure_Status)
-model6=metareg(msix,~`Exposure_Status)
-model7=metareg(mseven,~`Exposure_Status)
-model8=metareg(meight,~`Exposure_Status)
-model9=metareg(mnine,~`Exposure_Status)
-model10=metareg(mten,~`Exposure_Status)
-model11=metareg(meleven,~`Exposure_Status)
-model12=metareg(mtwelve,~`Exposure_Status)
-model13=metareg(mthirteen,~`Exposure_Status)
-model14=metareg(mfourteen,~`Exposure_Status)
-model15=metareg(mfifteen,~`Exposure_Status)
-model16=metareg(msixteen,~`Exposure_Status)
-model17=metareg(mseventeen,~`Exposure_Status)
-model18=metareg(meighteen,~`Exposure_Status)
+model1=metareg(mone,~Exposure_Status)
+model2=metareg(mtwo,~Exposure_Status)
+model3=metareg(mthree,~Exposure_Status)
+model4=metareg(mfour,~Exposure_Status)
+model5=metareg(mfive,~Exposure_Status)
+model6=metareg(msix,~Exposure_Status)
+model7=metareg(mseven,~Exposure_Status)
+model8=metareg(meight,~Exposure_Status)
+model9=metareg(mnine,~Exposure_Status)
+model10=metareg(mten,~Exposure_Status)
+model11=metareg(meleven,~Exposure_Status)
+model12=metareg(mtwelve,~Exposure_Status)
+model13=metareg(mthirteen,~Exposure_Status)
+model14=metareg(mfourteen,~Exposure_Status)
+model15=metareg(mfifteen,~Exposure_Status)
+model16=metareg(msixteen,~Exposure_Status)
+model17=metareg(mseventeen,~Exposure_Status)
+model18=metareg(meighteen,~Exposure_Status)
 
 #Molecular weights
-model80=metareg(meighty,~`Exposure_Status)
-model81=metareg(meightyone,~`Exposure_Status)
-model82=metareg(meightytwo,~`Exposure_Status)
-model83=metareg(meightythree,~`Exposure_Status)
-model84=metareg(meightyfour,~`Exposure_Status)
+model80=metareg(meighty,~Exposure_Status)
+model81=metareg(meightyone,~Exposure_Status)
+model82=metareg(meightytwo,~Exposure_Status)
+model83=metareg(meightythree,~Exposure_Status)
+model84=metareg(meightyfour,~Exposure_Status)
 
 #grouped analytes
-model40=metareg(mforty,~`Exposure_Status)
-model41=metareg(mfortyone,~`Exposure_Status)
-model42=metareg(mfortytwo,~`Exposure_Status)
-model43=metareg(mfortythree,~`Exposure_Status)
-model44=metareg(mfortyfour,~`Exposure_Status)
-model45=metareg(mfortyfive,~`Exposure_Status)
+model40=metareg(mforty,~Exposure_Status)
+model41=metareg(mfortyone,~Exposure_Status)
+model42=metareg(mfortytwo,~Exposure_Status)
+model43=metareg(mfortythree,~Exposure_Status)
+model44=metareg(mfortyfour,~Exposure_Status)
+model45=metareg(mfortyfive,~Exposure_Status)
 
 ########################################################################################
 #meta-reg estimates for Duration of Exposure (min)
-model101=metareg(mone,~`Duration_Exposure_min)
-model102=metareg(mtwo,~`Duration_Exposure_min)
-model103=metareg(mthree,~`Duration_Exposure_min)
-model104=metareg(mfour,~`Duration_Exposure_min)
-model105=metareg(mfive,~`Duration_Exposure_min)
-model106=metareg(msix,~`Duration_Exposure_min)
-model107=metareg(mseven,~`Duration_Exposure_min)
-model108=metareg(meight,~`Duration_Exposure_min)
-model109=metareg(mnine,~`Duration_Exposure_min)
-model110=metareg(mten,~`Duration_Exposure_min)
-model111=metareg(meleven,~`Duration_Exposure_min)
-model112=metareg(mtwelve,~`Duration_Exposure_min)
-model113=metareg(mthirteen,~`Duration_Exposure_min)
-model114=metareg(mfourteen,~`Duration_Exposure_min)
-model115=metareg(mfifteen,~`Duration_Exposure_min)
-model116=metareg(msixteen,~`Duration_Exposure_min)
-model117=metareg(mseventeen,~`Duration_Exposure_min)
-model118=metareg(meighteen,~`Duration_Exposure_min)
+model101=metareg(mone,~Duration_Exposure_min)
+model102=metareg(mtwo,~Duration_Exposure_min)
+model103=metareg(mthree,~Duration_Exposure_min)
+model104=metareg(mfour,~Duration_Exposure_min)
+model105=metareg(mfive,~Duration_Exposure_min)
+model106=metareg(msix,~Duration_Exposure_min)
+model107=metareg(mseven,~Duration_Exposure_min)
+model108=metareg(meight,~Duration_Exposure_min)
+model109=metareg(mnine,~Duration_Exposure_min)
+model110=metareg(mten,~Duration_Exposure_min)
+model111=metareg(meleven,~Duration_Exposure_min)
+model112=metareg(mtwelve,~Duration_Exposure_min)
+model113=metareg(mthirteen,~Duration_Exposure_min)
+model114=metareg(mfourteen,~Duration_Exposure_min)
+model115=metareg(mfifteen,~Duration_Exposure_min)
+model116=metareg(msixteen,~Duration_Exposure_min)
+model117=metareg(mseventeen,~Duration_Exposure_min)
+model118=metareg(meighteen,~Duration_Exposure_min)
 
 #molecular weights
-model800=metareg(meighty,~`Duration_Exposure_min)
-model801=metareg(meightyone,~`Duration_Exposure_min)
-model802=metareg(meightytwo,~`Duration_Exposure_min)
-model803=metareg(meightythree,~`Duration_Exposure_min)
-model804=metareg(meightyfour,~`Duration_Exposure_min)
+model800=metareg(meighty,~Duration_Exposure_min)
+model801=metareg(meightyone,~Duration_Exposure_min)
+model802=metareg(meightytwo,~Duration_Exposure_min)
+model803=metareg(meightythree,~Duration_Exposure_min)
+model804=metareg(meightyfour,~Duration_Exposure_min)
 
 #grouped analytes
 model400=metareg(mforty,~Duration_Exposure_min)
@@ -165,7 +165,357 @@ model1002=metareg(mtwo,~Sampling_time_hr)
 model1003=metareg(mthree,~Sampling_time_hr)
 model1004=metareg(mfour,~Sampling_time_hr)
 model1005=metareg(mfive,~Sampling_time_hr)
-model1001=metareg(mone,~Sampling_time_hr)
+model1006=metareg(msix,~Sampling_time_hr)
+model1007=metareg(mseven,~Sampling_time_hr)
+model1008=metareg(meight,~Sampling_time_hr)
+model1009=metareg(mnine,~Sampling_time_hr)
+model1010=metareg(mten,~Sampling_time_hr)
+model1011=metareg(meleven,~Sampling_time_hr)
+model1012=metareg(mtwelve,~Sampling_time_hr)
+model1013=metareg(mthirteen,~Sampling_time_hr)
+model1014=metareg(mfourteen,~Sampling_time_hr)
+model1015=metareg(mfifteen,~Sampling_time_hr)
+model1016=metareg(msixteen,~Sampling_time_hr)
+model1017=metareg(mseventeen,~Sampling_time_hr)
+model1018=metareg(meighteen,~Sampling_time_hr)
+
+#Molecular Weight
+model810=metareg(meighty, ~Sampling_time_hr)
+model811=metareg(meightyone, ~Sampling_time_hr)
+model812=metareg(meightytwo, ~Sampling_time_hr)
+model813=metareg(meightythree, ~Sampling_time_hr)
+model814=metareg(meightyfour, ~Sampling_time_hr)
+
+#grouped analytes
+model410=metareg(mforty, Sampling_time_hr)
+model411=metareg(mfortyone, Sampling_time_hr)
+model412=metareg(mfortytwo, Sampling_time_hr)
+model413=metareg(mfortythree, Sampling_time_hr)
+model414=metareg(mfortyfour, Sampling_time_hr)
+model415=metareg(mfortyfive, Sampling_time_hr)
+
+####################################################################################
+#meta-reg estimates for Grilled Food (Y|N)
+model2001=metareg(mone,~Grilled_Food)
+model2002=metareg(mtwo,~Grilled_Food)
+model2003=metareg(mthree,~Grilled_Food)
+model2004=metareg(mfour,~Grilled_Food)
+model2005=metareg(mfive,~Grilled_Food)
+model2006=metareg(msix,~Grilled_Food)
+model2007=metareg(mseven,~Grilled_Food)
+model2008=metareg(meight,~Grilled_Food)
+model2009=metareg(mnine,~Grilled_Food)
+model2010=metareg(mten,~Grilled_Food)
+model2011=metareg(meleven,~Grilled_Food)
+model2012=metareg(mtwelve,~Grilled_Food)
+model2013=metareg(mthirteen,~Grilled_Food)
+model2014=metareg(mfourteen,~Grilled_Food)
+model2015=metareg(mfifteen,~Grilled_Food)
+model2016=metareg(msixteen,~Grilled_Food)
+model2017=metareg(mseventeen,~Grilled_Food)
+model2018=metareg(meighteen,~Grilled_Food)
+
+#Molecular weight
+model820=metareg(meighty,~Grilled_Food)
+model821=metareg(meightyone,~Grilled_Food)
+model822=metareg(meightytwo,~Grilled_Food)
+model823=metareg(meightythree,~Grilled_Food)
+model824=metareg(meightyfour,~Grilled_Food)
+
+#Grouped analytes
+model420=metareg(mforty,~Grilled_Food)
+model421=metareg(mfortyone,~Grilled_Food)
+model422=metareg(mfortytwo,~Grilled_Food)
+model423=metareg(mfortythree,~Grilled_Food)
+model424=metareg(mfortyfour,~Grilled_Food)
+model425=metareg(mfortyfive,~Grilled_Food)
+
+
+########################################################################################
+#meta-reg estimates for Type of Fire Activity (Structural|Wildfire)
+model3001=metareg(mone,~Type_Of_Fire)
+model3002=metareg(mtwo,~Type_Of_Fire)
+model3003=metareg(mthree,~Type_Of_Fire)
+model3004=metareg(mfour,~Type_Of_Fire)
+model3005=metareg(mfive,~Type_Of_Fire)
+model3006=metareg(msix,~Type_Of_Fire)
+model3007=metareg(mseven,~Type_Of_Fire)
+model3008=metareg(meight,~Type_Of_Fire)
+model3009=metareg(mnine,~Type_Of_Fire)
+model3010=metareg(mten,~Type_Of_Fire)
+model3011=metareg(meleven,~Type_Of_Fire)
+model3012=metareg(mtwelve,~Type_Of_Fire)
+model3013=metareg(mthirteen,~Type_Of_Fire)
+model3014=metareg(mfourteen,~Type_Of_Fire)
+model3015=metareg(mfifteen,~Type_Of_Fire)
+model3016=metareg(msixteen,~Type_Of_Fire)
+model3017=metareg(mseventeen,~Type_Of_Fire)
+model3018=metareg(meighteen,~Type_Of_Fire)
+
+#Molecular weights
+model830=metareg(meighty,~Type_Of_Fire)
+model831=metareg(meightyone,~Type_Of_Fire)
+model832=metareg(meightytwo,~Type_Of_Fire)
+model833=metareg(meightythree,~Type_Of_Fire)
+model834=metareg(meightyfour,~Type_Of_Fire)
+
+#Grouped analytes
+model430=metareg(mforty,~Type_Of_Fire)
+model431=metareg(mfortyone,~Type_Of_Fire)
+model432=metareg(mfortytwo,~Type_Of_Fire)
+model433=metareg(mfortythree,~Type_Of_Fire)
+model434=metareg(mfortyfour,~Type_Of_Fire)
+model435=metareg(mfortyfive,~Type_Of_Fire)
+
+
+############################################################################################
+############################################################################################
+#Grilled Food (Y|N) by Type of Fire Activity (Structural or Wildfire)
+
+#subsetting to Structural fire responses
+oneacestruct <- oneace[oneace$`Type_Of_Fire`=="Structural", ]
+onenapstruct <- onenap[onenap$`Type_Of_Fire`=="Structural", ]
+onephestruct <- onephe[onephe$`Type_Of_Fire`=="Structural", ]
+onepyrstruct <- onepyr[onepyr$`Type_Of_Fire`=="Structural", ]
+twoflustruct <- twoflu[twoflu$`Type_Of_Fire`=="Structural", ]
+twonapstruct <- twonap[twonap$`Type_Of_Fire`=="Structural", ]
+twophestruct <- twophe[twophe$`Type_Of_Fire`=="Structural", ]
+threeflustruct <- threeflu[threeflu$`Type_Of_Fire`=="Structural", ]
+threephestruct <- threephe[threephe$`Type_Of_Fire`=="Structural", ]
+fourphestruct <- fourphe[fourphe$`Type_Of_Fire`=="Structural", ]
+nineflustruct <- nineflu[nineflu$`Type_Of_Fire`=="Structural", ]
+ninephestruct <- ninephe[ninephe$`Type_Of_Fire`=="Structural", ]
+ohflustruct <- ohflu[ohflu$`Type_Of_Fire`=="Structural", ]
+ohnapstruct <- ohnap[ohnap$`Type_Of_Fire`=="Structural", ]
+ohphestruct <- ohphe[ohphe$`Type_Of_Fire`=="Structural", ]
+ohpyrstruct <- ohpyr[ohpyr$`Type_Of_Fire`=="Structural", ]
+ohacestruct <- ohace[ohace$`Type_Of_Fire`=="Structural", ]
+ohpahstruct <- ohpah[ohpah$`Type_Of_Fire`=="Structural", ]
+
+#Molecular weights
+onefourfourstruct <- onefourfour[onefourfour$`Type_Of_Fire`=="Structural", ]
+onesevenzerostruct <- onesevenzero[onesevenzero$`Type_Of_Fire`=="Structural", ]
+oneeighttwostruct <- oneeighttwo[oneeighttwo$`Type_Of_Fire`=="Structural", ]
+oneninefourstruct <- oneninefour[oneninefour$`Type_Of_Fire`=="Structural", ]
+twooneeightstruct <- twooneeight[twooneeight$`Type_Of_Fire`=="Structural", ]
+
+#Grouped analytes
+allflustruct <- allflu[allflu$`Type_Of_Fire`=="Structural", ]
+allnapstruct <- allnap[allnap$`Type_Of_Fire`=="Structural", ]
+allphestruct <- allphe[allphe$`Type_Of_Fire`=="Structural", ]
+allpyrstruct <- allpyr[allpyr$`Type_Of_Fire`=="Structural", ]
+allacestruct <- allace[allace$`Type_Of_Fire`=="Structural", ]
+allpahstruct <- allpah[allpah$`Type_Of_Fire`=="Structural", ]
+
+########################################################################
+#Overall estimates for structural fire type
+
+monestr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = oneacestruct, comb.fixed = F, sm="AM")
+mtwostr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = onenapstruct, comb.fixed = F, sm="AM")
+mthreestr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = onephestruct, comb.fixed = F, sm="AM")
+mfourstr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = onepyrstruct, comb.fixed = F, sm="AM")
+mfivestr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = twoflustruct, comb.fixed = F, sm="AM")
+msixstr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = twonapstruct, comb.fixed = F, sm="AM")
+msevenstr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = twophestruct, comb.fixed = F, sm="AM")
+meightstr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = threeflustruct, comb.fixed = F, sm="AM")
+mninestr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = threephestruct, comb.fixed = F, sm="AM")
+mtenstr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = fourphestruct, comb.fixed = F, sm="AM")
+melevenstr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = nineflustruct, comb.fixed = F, sm="AM")
+mtwelvestr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ninephestruct, comb.fixed = F, sm="AM")
+mthirteenstr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ohflustruct, comb.fixed = F, sm="AM")
+mfourteenstr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ohnapstruct, comb.fixed = F, sm="AM")
+mfifteenstr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ohphestruct, comb.fixed = F, sm="AM")
+msixteenstr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ohpyrstruct, comb.fixed = F, sm="AM")
+mseventeenstr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ohacestruct, comb.fixed = F, sm="AM")
+meighteenstr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ohpahstruct, comb.fixed = F, sm="AM")
+
+#molecular weights
+meightystr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = onefourfourstruct, comb.fixed = F, sm="AM")
+meightyonestr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = onesevenzerostruct, comb.fixed = F, sm="AM")
+meightytwostr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = oneeighttwostruct, comb.fixed = F, sm="AM")
+meightythreestr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = oneninefourstruct, comb.fixed = F, sm="AM")
+meightyfourstr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = twooneeightstruct, comb.fixed = F, sm="AM")
+
+#grouped analytes
+mfortystr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = allflustruct, comb.fixed = F, sm="AM")
+mfortyonestr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = allnapstruct, comb.fixed = F, sm="AM")
+mfortytwostr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = allphestruct, comb.fixed = F, sm="AM")
+mfortythreestr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = allpyrstruct, comb.fixed = F, sm="AM")
+mfortyfourstr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = allacestruct, comb.fixed = F, sm="AM")
+mfortyfivestr=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = allpahstruct, comb.fixed = F, sm="AM")
+
+
+#####################################################################################
+#meta-reg estimates for Grilled Food (Y|N) for structural fire type
+model2001str=metareg(monestr,~Grilled_Food)
+model2002str=metareg(mtwostr,~Grilled_Food)
+model2003str=metareg(mthreestr,~Grilled_Food)
+model2004str=metareg(mfourstr,~Grilled_Food)
+model2005str=metareg(mfivestr,~Grilled_Food)
+model2006str=metareg(msixstr,~Grilled_Food)
+model2007str=metareg(msevenstr,~Grilled_Food)
+model2008str=metareg(meightstr,~Grilled_Food)
+model2009str=metareg(mninestr,~Grilled_Food)
+model2010str=metareg(mtenstr,~Grilled_Food)
+model2011str=metareg(melevenstr,~Grilled_Food)
+model2012str=metareg(mtwelvestr,~Grilled_Food)
+model2013str=metareg(mthirteenstr,~Grilled_Food)
+model2014str=metareg(mfourteenstr,~Grilled_Food)
+model2015str=metareg(mfifteenstr,~Grilled_Food)
+model2016str=metareg(msixteenstr,~Grilled_Food)
+model2017str=metareg(mseventeenstr,~Grilled_Food)
+model2018str=metareg(meighteenstr,~Grilled_Food)
+
+#Molecular weight
+model820str=metareg(meightystr,~Grilled_Food)
+model821str=metareg(meightyonestr,~Grilled_Food)
+model822str=metareg(meightytwostr,~Grilled_Food)
+model823str=metareg(meightythreestr,~Grilled_Food)
+model824str=metareg(meightyfourstr,~Grilled_Food)
+
+#Grouped analytes
+model420str=metareg(mfortystr,~Grilled_Food)
+model421str=metareg(mfortyonestr,~Grilled_Food)
+model422str=metareg(mfortytwostr,~Grilled_Food)
+model423str=metareg(mfortythreestr,~Grilled_Food)
+model424str=metareg(mfortyfourstr,~Grilled_Food)
+model425str=metareg(mfortyfivestr,~Grilled_Food)
+
+###########################################################################################################################
+#subsetting to Wildfire responses
+oneacewild <- oneace[oneace$`Type_Of_Fire`=="Wildfire", ]
+onenapwild <- onenap[onenap$`Type_Of_Fire`=="Wildfire", ]
+onephewild <- onephe[onephe$`Type_Of_Fire`=="Wildfire", ]
+onepyrwild <- onepyr[onepyr$`Type_Of_Fire`=="Wildfire", ]
+twofluwild <- twoflu[twoflu$`Type_Of_Fire`=="Wildfire", ]
+twonapwild <- twonap[twonap$`Type_Of_Fire`=="Wildfire", ]
+twophewild <- twophe[twophe$`Type_Of_Fire`=="Wildfire", ]
+threefluwild <- threeflu[threeflu$`Type_Of_Fire`=="Wildfire", ]
+threephewild <- threephe[threephe$`Type_Of_Fire`=="Wildfire", ]
+fourphewild <- fourphe[fourphe$`Type_Of_Fire`=="Wildfire", ]
+ninefluwild <- nineflu[nineflu$`Type_Of_Fire`=="Wildfire", ]
+ninephewild <- ninephe[ninephe$`Type_Of_Fire`=="Wildfire", ]
+ohfluwild <- ohflu[ohflu$`Type_Of_Fire`=="Wildfire", ]
+ohnapwild <- ohnap[ohnap$`Type_Of_Fire`=="Wildfire", ]
+ohphewild <- ohphe[ohphe$`Type_Of_Fire`=="Wildfire", ]
+ohpyrwild <- ohpyr[ohpyr$`Type_Of_Fire`=="Wildfire", ]
+ohacewild <- ohace[ohace$`Type_Of_Fire`=="Wildfire", ]
+ohpahwild <- ohpah[ohpah$`Type_Of_Fire`=="Wildfire", ]
+
+#Molecular weights
+onefourfourwild <- onefourfour[onefourfour$`Type_Of_Fire`=="Wildfire", ]
+onesevenzerowild <- onesevenzero[onesevenzero$`Type_Of_Fire`=="Wildfire", ]
+oneeighttwowild <- oneeighttwo[oneeighttwo$`Type_Of_Fire`=="Wildfire", ]
+oneninefourwild <- oneninefour[oneninefour$`Type_Of_Fire`=="Wildfire", ]
+twooneeightwild <- twooneeight[twooneeight$`Type_Of_Fire`=="Wildfire", ]
+
+#Grouped analytes
+allfluwild <- allflu[allflu$`Type_Of_Fire`=="Wildfire", ]
+allnapwild <- allnap[allnap$`Type_Of_Fire`=="Wildfire", ]
+allphewild <- allphe[allphe$`Type_Of_Fire`=="Wildfire", ]
+allpyrwild <- allpyr[allpyr$`Type_Of_Fire`=="Wildfire", ]
+allacewild <- allace[allace$`Type_Of_Fire`=="Wildfire", ]
+allpahwild <- allpah[allpah$`Type_Of_Fire`=="Wildfire", ]
+
+############################################################################
+#Overall estimates for Wildfire type
+monewild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = oneacewild, comb.fixed = F, sm="AM")
+mtwowild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = onenapwild, comb.fixed = F, sm="AM")
+mthreewild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = onephewild, comb.fixed = F, sm="AM")
+mfourwild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = onepyrwild, comb.fixed = F, sm="AM")
+mfivewild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = twofluwild, comb.fixed = F, sm="AM")
+msixwild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = twonapwild, comb.fixed = F, sm="AM")
+msevenwild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = twophewild, comb.fixed = F, sm="AM")
+meightwild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = threefluwild, comb.fixed = F, sm="AM")
+mninewild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = threephewild, comb.fixed = F, sm="AM")
+mtenwild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = fourphewild, comb.fixed = F, sm="AM")
+melevenwild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ninefluwild, comb.fixed = F, sm="AM")
+mtwelvewild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ninephewild, comb.fixed = F, sm="AM")
+mthirteenwild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ohfluwild, comb.fixed = F, sm="AM")
+mfourteenwild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ohnapwild, comb.fixed = F, sm="AM")
+mfifteenwild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ohphewild, comb.fixed = F, sm="AM")
+msixteenwild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ohpyrwild, comb.fixed = F, sm="AM")
+mseventeenwild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ohacewild, comb.fixed = F, sm="AM")
+meighteenwild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = ohpahwild, comb.fixed = F, sm="AM")
+
+#molecular weights
+meightywild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = onefourfourwild, comb.fixed = F, sm="AM")
+meightyonewild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = onesevenzerowild, comb.fixed = F, sm="AM")
+meightytwowild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = oneeighttwowild, comb.fixed = F, sm="AM")
+meightythreewild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = oneninefourwild, comb.fixed = F, sm="AM")
+meightyfourwild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = twooneeightwild, comb.fixed = F, sm="AM")
+
+#grouped analytes
+mfortywild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = allfluwild, comb.fixed = F, sm="AM")
+mfortyonewild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = allnapwild, comb.fixed = F, sm="AM")
+mfortytwowild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = allphewild, comb.fixed = F, sm="AM")
+mfortythreewild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = allpyrwild, comb.fixed = F, sm="AM")
+mfortyfourwild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = allacewild, comb.fixed = F, sm="AM")
+mfortyfivewild=metagen(mean, SE, n.e = `Number of Samples`, median = median, min = min, max = max, studlab = Author, data = allpahwild, comb.fixed = F, sm="AM")
+
+
+########################################################################
+#meta-reg estimates for Grilled Food (Y|N) for Wildfire type
+model2001wild=metareg(monewild,~Grilled_Food)
+model2002wild=metareg(mtwowild,~Grilled_Food)
+model2003wild=metareg(mthreewild,~Grilled_Food)
+model2004wild=metareg(mfourwild,~Grilled_Food)
+model2005wild=metareg(mfivewild,~Grilled_Food)
+model2006wild=metareg(msixwild,~Grilled_Food)
+model2007wild=metareg(msevenwild,~Grilled_Food)
+model2008wild=metareg(meightwild,~Grilled_Food)
+model2009wild=metareg(mninewild,~Grilled_Food)
+model2010wild=metareg(mtenwild,~Grilled_Food)
+model2011wild=metareg(melevenwild,~Grilled_Food)
+model2012wild=metareg(mtwelvewild,~Grilled_Food)
+model2013wild=metareg(mthirteenwild,~Grilled_Food)
+model2014wild=metareg(mfourteenwild,~Grilled_Food)
+model2015wild=metareg(mfifteenwild,~Grilled_Food)
+model2016wild=metareg(msixteenwild,~Grilled_Food)
+model2017wild=metareg(mseventeenwild,~Grilled_Food)
+model2018wild=metareg(meighteenwild,~Grilled_Food)
+
+#Molecular weight
+model820wild=metareg(meightywild,~Grilled_Food)
+model821wild=metareg(meightyonewild,~Grilled_Food)
+model822wild=metareg(meightytwowild,~Grilled_Food)
+model823wild=metareg(meightythreewild,~Grilled_Food)
+model824wild=metareg(meightyfourwild,~Grilled_Food)
+
+#Grouped analytes
+model420wild=metareg(mfortywild,~Grilled_Food)
+model421wild=metareg(mfortyonewild,~Grilled_Food)
+model422wild=metareg(mfortytwowild,~Grilled_Food)
+model423wild=metareg(mfortythreewild,~Grilled_Food)
+model424wild=metareg(mfortyfourwild,~Grilled_Food)
+model425wild=metareg(mfortyfivewild,~Grilled_Food)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
