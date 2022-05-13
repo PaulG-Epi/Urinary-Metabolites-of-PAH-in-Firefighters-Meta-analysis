@@ -1,5 +1,13 @@
 # Urinary PAH analyte meta-analysis project
 
+#READ ME
+#This meta-analysis aimed to estimate the levels of urinary OHPAH among firefighters,
+determine risk attributions, and evaluate the scope of preventive efforts and their utility
+as diagnostic tools. the analyses (meta-regressions and bias detections) were performed
+using the following code in R. the meta, metafor, gridtext and ggplot2 packages were used.
+
+
+
 library(ggplot2)
 library(meta)
 library(metafor)
@@ -521,18 +529,11 @@ dev.off()
 
 
 ######################################################################################################
-#for funnel plots
-funnel(mtwo, comb.fixed = F)
-title("Funnel Plot (1-hydroxynaphthalene)")
+#for funnel plot
 
-funnel(msix, comb.fixed = F)
-title("Funnel Plot (2-hydroxynaphthalene)")
+funnel(m, xlim=c(-5,10))
+title("Funnel Plot PAH analytes)
 
-funnel(mseven, comb.fixed = F)
-title("Funnel Plot (2-hydroxyphenanthrene)")
-
-funnel(meight, comb.fixed = F)
-title("Funnel Plot (3-hydroxyfluorene)")
 
 
 
